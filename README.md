@@ -1,4 +1,4 @@
-# React2Shell PoC – Hidden Investigations
+# React2Shell Scanner – with PoC
 
 > **CVE-2025-55182 – React Server Components RCE PoC**  
 > Educational exploit client for the Hidden Investigations React2Shell lab.
@@ -251,23 +251,6 @@ When `-o/--output` is used, the tool writes an array of objects like:
 
 ---
 
-## Development
-
-Lint / format (optional suggestions):
-
-- Use `ruff` or `flake8` for linting
-- Use `black` for formatting
-
-Example:
-
-```bash
-pip install black ruff
-black tool.py
-ruff check tool.py
-```
-
----
-
 ## Credits & Acknowledgements
 
 - **[Hidden Investigations](https://hiddeninvestigations.net/)** – for publishing the React2Shell educational lab and PoC client.
@@ -278,15 +261,6 @@ ruff check tool.py
 
 ## License
 
-Choose a license that fits your goals (for example **MIT**, **Apache-2.0**, or a more restrictive license).
+This project is licensed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
-Example (MIT):
-
-```text
-MIT License
-
-Copyright (c) Hidden Investigations
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-...
-```
+📬 Contact us: [hi@hiddeninvestigations.net](mailto:hi@hiddeninvestigations.net)
