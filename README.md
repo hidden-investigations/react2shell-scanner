@@ -79,7 +79,7 @@ pip install -r requirements.txt
 4. Run the tool:
 
 ```bash
-python3 tool.py -h
+python3 react2shell-scanner.py -h
 ```
 
 ---
@@ -89,15 +89,15 @@ python3 tool.py -h
 Basic help:
 
 ```bash
-python3 tool.py -h
+python3 react2shell-scanner.py -h
 ```
 
 The tool requires a **target URL**:
 
 ```bash
-python3 tool.py -t http://localhost:3000 -c "id"
+python3 react2shell-scanner.py -t http://localhost:3000 -c "id"
 # or
-python3 tool.py --url http://localhost:3000 -c "id"
+python3 react2shell-scanner.py --url http://localhost:3000 -c "id"
 ```
 
 If you run it **without** `-t/--target` or `-u/--url`, it prints a **branded help message** and exits.
@@ -155,7 +155,7 @@ If you run it **without** `-t/--target` or `-u/--url`, it prints a **branded hel
 Quiet mode example (nice, multi-line output):
 
 ```bash
-python3 tool.py --url http://localhost:3000 -q -c "ls -la"
+python3 react2shell-scanner.py --url http://localhost:3000 -q -c "ls -la"
 ```
 
 Output:
@@ -191,37 +191,37 @@ If you use `-l/--list`, the tool will print a warning and exit, suggesting you u
 Run against local lab:
 
 ```bash
-python3 tool.py --url http://localhost:3000 -c "whoami"
+python3 react2shell-scanner.py --url http://localhost:3000 -c "whoami"
 ```
 
 Use WAF bypass with a larger junk field:
 
 ```bash
-python3 tool.py -t http://localhost:3000   --waf-bypass --waf-bypass-size 256   -c "id"
+python3 react2shell-scanner.py -t http://localhost:3000   --waf-bypass --waf-bypass-size 256   -c "id"
 ```
 
 Multiple paths on the same host:
 
 ```bash
-python3 tool.py -t http://localhost:3000   --path /   --path /_next/data   -c "id"
+python3 react2shell-scanner.py -t http://localhost:3000   --path /   --path /_next/data   -c "id"
 ```
 
 Paths from file:
 
 ```bash
-python3 tool.py -t http://localhost:3000   --path-file paths.txt   -c "id"
+python3 react2shell-scanner.py -t http://localhost:3000   --path-file paths.txt   -c "id"
 ```
 
 Safe check mode (no OS commands executed):
 
 ```bash
-python3 tool.py -t http://localhost:3000 --safe-check
+python3 react2shell-scanner.py -t http://localhost:3000 --safe-check
 ```
 
 JSON output of results to file:
 
 ```bash
-python3 tool.py -t http://localhost:3000   --path / --path /_next   -c "id"   -o results.json --all-results
+python3 react2shell-scanner.py -t http://localhost:3000   --path / --path /_next   -c "id"   -o results.json --all-results
 ```
 
 ---
